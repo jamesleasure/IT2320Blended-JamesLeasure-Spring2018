@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="myScript.js"></script>
+</head>
+<body>
+<h2>
+<script>
+// remember that document.write() outputs values to HTML - not the rendered results of the html
+document.writeln('Title of Document<br><br>Confidential');
+</script>
+</h2>
+<!-- Example adding newlines to output -->
+<p>Example<br><br>text</p>
+<script>
+//alert('hello from the middle!');
+</script>
+
+<!-- We'll use this element for output -->
+<p id="demo">A Paragraph.</p>
+
+<!-- we have attached a button, so myFunction is called when the button is clicked -->
+<button type="button" onclick="myFunction()">Try it</button>
+<script>
+    //alert('hello from the top!');
+	// in this example, we change the innerHTML of element with id=demo
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
+</script>
+
+</body>
+</html> 
