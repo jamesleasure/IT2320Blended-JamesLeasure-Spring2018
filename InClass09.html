@@ -1,21 +1,35 @@
+<!DOCTYPE html>
 <html>
-<html>
-<body>
+<head>
+<style>
+.siblings * { 
+    display: block;
+    border: 2px solid lightgrey;
+    color: lightgrey;
+    padding: 5px;
+    margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p").not(".intro").css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body class="siblings">
 
-<p>This is a paragraph.
-    <div id="div1">Div 1</div>
-    <div id="div2">Div 2
-        <span>Span 1</span>
-        <span>Span 2</span>
-        <span>Span 3</span>
-    </div>
-    <div id="div3">Div 3</div>
-    <div id="div4">Div 4</div>
-    <div id="div5">Div 5</div>
-    <div id="div6">Div 6</div>
-</p>
-<p>This is a paragraph.</p>
-<p>This is a paragraph.</p>
+<div>div (parent)
+  <p class="intro">p</p>
+  <span>span</span>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <p>paragraph in the middle</p>
+  <h4>h4</h4>
+  <h5>h5</h5>
+  <h6>h6</h6>
+  <p class="closer">p</p>
+</div>
 
 </body>
 </html>
