@@ -9,17 +9,35 @@
         $('li').click(function() {
             $(this).children().slideToggle();
         });
+        
+        $('#pizzaName').focus();
 
+        //$('#output').text($('ul').html());
     });
 
     function addPizza() {
-        alert('add pizza called');
+        //var description = $('#pizzaDescription').val();
+        //var name = $('#pizzaName').val();
+        //var newHTML = '<li>' + name + '<p>' + 
+        //    description + '</p></li>';
+
+        var newHTML = '<li>' + $('#pizzaName').val() + '<p>' + 
+                $('#pizzaDescription').val() + '</p></li>';
+        
+        $('ul').append(newHTML);
+
+        //$('#output').text($('ul').html());
+
+        $('li:last').click(function() {
+            $(this).children().slideToggle();
+        });
+        
     }
 </script>
 </head>
 <body>
 <form>
-    Pizza Type <br><input type="text" id="pizzaName"><br><br>
+    Pizza Type <br><input type="text" id="pizzaName" value=""><br><br>
     Description <br><textarea id="pizzaDescription" rows="8"></textarea><br>
     <input type="button" onclick="addPizza()" value="Add Pizza">
 </form>
@@ -45,5 +63,8 @@ Neapolitan Pizza
 <p>California pizza, or gourmet pizza, is known for its unusual ingredients. This pizza got its start back in the late 1970’s when Chef Ed LaDou began experimenting with pizza recipes in the classic Italian restaurant, Prego. By chance, he served one of his newest creations, mustard, ricotta, pate, and red pepper, to Wolfgang Puck. Impressed with LaDou’s innovative pie, Puck invited him to be a head pizza chef at his restaurant. It was here that LaDou came up with over 250 unique pizza recipes that eventually formed the menu of chain restaurant, California Pizza Kitchen.</p>
 </li>
 </ul>
+<div id="output">
+
+</div>
 </body>
 </html>
