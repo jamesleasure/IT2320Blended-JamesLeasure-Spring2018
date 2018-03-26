@@ -1,7 +1,28 @@
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+        $('p').hide();
+
+        $('li').click(function() {
+            $(this).children().slideToggle();
+        });
+
+    });
+
+    function addPizza() {
+        alert('add pizza called');
+    }
+</script>
 </head>
 <body>
+<form>
+    Pizza Type <br><input type="text" id="pizzaName"><br><br>
+    Description <br><textarea id="pizzaDescription" rows="8"></textarea><br>
+    <input type="button" onclick="addPizza()" value="Add Pizza">
+</form>
 <ul>
 <li>
 Neapolitan Pizza
