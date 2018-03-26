@@ -9,6 +9,10 @@
         $('li').click(function() {
             $(this).children().slideToggle();
         });
+
+        $('li').dblclick(function() {
+            $(this).remove();
+        });
         
         $('#pizzaName').focus();
 
@@ -32,6 +36,9 @@
             $(this).children().slideToggle();
         });
         
+        $('li:last').dblclick(function() {
+            $(this).remove();
+        });
     }
 </script>
 </head>
